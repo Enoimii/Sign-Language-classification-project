@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Language Recognizer</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 2rem 0;
+        }
+        .main-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .btn {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 1rem;
+            margin-top: 1rem;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #2980b9;
+        }
+        .features {
+            display: flex;
+            justify-content: space-between;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+        .feature-box {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            padding: 1.5rem;
+            margin: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .feature-box h3 {
+            color: #2c3e50;
+        }
+        .sign-language-section {
+            background: white;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .sign-language-section h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+        .language {
+            color: #990502;
+            text-align: center;
+            text-transform: uppercase;
+            padding-top: 0.5rem;
+        }
+        footer {
+            background: #2c3e50;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Sign Language Recognizer</h1>
+            <p>Bridging communication gaps through technology</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="main-content">
+            <h2 class="main-title">Welcome to Our Sign Language Recognition System</h2>
+            <p>Our advanced machine learning model can recognize various sign language gestures from images. Whether you're learning sign language, need assistance with communication, or just curious about the technology, our tool can help you understand the meaning behind the signs.</p>
+
+            <div class="sign-language-section">
+                <h2>What is Sign Language?</h2>
+                <p>Sign language is a visual means of communicating using gestures, facial expressions, and body language. It's the primary means of communication for many deaf and hard-of-hearing people around the world.</p>
+
+                <h3>Key Facts About Sign Language:</h3>
+                <ul>
+                    <li>Sign languages are complete, natural languages with their own grammar and syntax</li>
+                    <li>Different countries have different sign languages (ASL, BSL, LSF, etc.)</li>
+                    <li>Sign languages are not universal and aren't based on spoken languages</li>
+                    <li>They incorporate facial expressions and body movements to convey meaning</li>
+                    <li>Sign languages evolve naturally within deaf communities</li>
+                </ul>
+
+                <h3 class="language">In this model we are recognizing the American Sign Language (ASL) Alphabet</h3>
+            </div>
+
+            <div class="features">
+                <div class="feature-box">
+                    <h3>How It Works</h3>
+                    <p>Simply upload an image containing a sign language gesture, and our system will analyze it to determine the corresponding letter or word.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>Why It Matters</h3>
+                    <p>Sign language recognition technology helps bridge communication gaps between deaf and hearing communities, making the world more accessible.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>Get Started</h3>
+                    <p>Ready to try it out? Click the button below to upload your own sign language image for recognition.</p>
+                    <a href="{{ url_for('upload') }}" class="btn">Try It Now</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer></footer>
+</body>
+</html>
